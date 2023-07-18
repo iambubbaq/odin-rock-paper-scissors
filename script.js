@@ -4,7 +4,11 @@ function getComputerChoice() {
     let computerSelection = choices[Math.floor(Math.random() * choices.length)];
     return computerSelection;
 }
-//create playRound function with two parameters of computerSelection and playerSelection
 //prompt playerChoice and store as case insensitive
+function getPlayerChoice() {
+    let playerSelection = prompt("Type Rock, Paper, or Scissors", "Rock");
+    return playerSelection.toLowerCase();
+}
+//create playRound function with two parameters of computerSelection and playerSelection
 //return result as a string with choice beating choice
 //game funtion to loop for 5 rounds
