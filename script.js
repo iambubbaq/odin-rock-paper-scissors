@@ -1,3 +1,9 @@
+let computerSelection;
+let playerSelection;
+let computerWins = 0;
+let playerWins = 0;
+let round = 0;
+
 //getComputerChoice to randomly select Rock, Paper, Or Scissors
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
@@ -10,33 +16,68 @@ function getPlayerChoice() {
   return playerSelection.toLowerCase();
 }
 //create playRound function with two parameters of computerSelection and playerSelection
-let computerSelection;
-let playerSelection;
+
 function playRound(computerSelection, playerSelection) {
   //return result as a string with choice beating choice
   computerSelection = getComputerChoice();
   playerSelection = getPlayerChoice();
   if (computerSelection === playerSelection) {
+    playerWins = playerWins + 0;
+    computerWins = computerWins + 0;
+    round = round + 1;
     return (
       computerSelection +
       " and " +
       playerSelection +
-      " are the same! Tied game!"
+      " are the same! Tied game! " +
+      "Computer Wins: " +
+      computerWins +
+      " Player Wins: " +
+      playerWins +
+      " Round: " +
+      round
     );
   } else if (
     (computerSelection === "rock" && playerSelection === "scissors") ||
     (computerSelection === "paper" && playerSelection === "rock") ||
     (computerSelection === "scissors" && playerSelection === "paper")
   ) {
-    return computerSelection + " beats " + playerSelection + " you lose!";
+    playerWins = playerWins + 0;
+    computerWins = computerWins + 1;
+    round = round + 1;
+    return (
+      computerSelection +
+      " beats " +
+      playerSelection +
+      " you lose! " +
+      "Computer Wins: " +
+      computerWins +
+      " Player Wins: " +
+      playerWins +
+      " Rounds: " +
+      round
+    );
   } else if (
     (computerSelection === "rock" && playerSelection === "paper") ||
     (computerSelection === "paper" && playerSelection === "scissors") ||
     (computerSelection === "scissors" && playerSelection === "rock")
   ) {
-    return playerSelection + " beats " + computerSelection + " you win!";
+    playerWins = playerWins + 1;
+    computerWins = computerWins + 0;
+    round = round + 1;
+    return (
+      playerSelection +
+      " beats " +
+      computerSelection +
+      " you win! " +
+      "Computer Wins: " +
+      computerWins +
+      " Player Wins: " +
+      playerWins +
+      " Rounds: " +
+      round
+    );
   }
-  
 }
 //game funtion to loop for 5 rounds
 function game() {
@@ -45,5 +86,10 @@ function game() {
   console.log(playRound(computerSelection, playerSelection));
   console.log(playRound(computerSelection, playerSelection));
   console.log(playRound(computerSelection, playerSelection));
+  if (computerWins > playerWins) {
+    console.log("Computer Wins! " + computerWins + " to " + playerWins);
+  } else {
+    console.log("Player Wins! " + playerWins + " to " + computerWins);
+  }
 }
 game();
