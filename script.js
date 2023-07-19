@@ -12,7 +12,7 @@ function getComputerChoice() {
 }
 //prompt playerChoice and store as case insensitive
 function getPlayerChoice() {
-  let playerSelection = prompt("Type Rock, Paper, or Scissors", "Type Choice");
+  let playerSelection = prompt("Type Rock, Paper, or Scissors");
   return playerSelection.toLowerCase();
 }
 //create playRound function with two parameters of computerSelection and playerSelection
