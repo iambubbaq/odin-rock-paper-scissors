@@ -12,7 +12,7 @@ function getComputerChoice() {
 }
 //prompt playerChoice and store as case insensitive
 function getPlayerChoice() {
-  let playerSelection = prompt("Type Rock, Paper, or Scissors", "Rock");
+  let playerSelection = prompt("Type Rock, Paper, or Scissors", "Type Choice");
   return playerSelection.toLowerCase();
 }
 //create playRound function with two parameters of computerSelection and playerSelection
@@ -81,15 +81,15 @@ function playRound(computerSelection, playerSelection) {
 }
 //game funtion to loop for 5 rounds
 function game() {
-  console.log(playRound(computerSelection, playerSelection));
-  console.log(playRound(computerSelection, playerSelection));
-  console.log(playRound(computerSelection, playerSelection));
-  console.log(playRound(computerSelection, playerSelection));
-  console.log(playRound(computerSelection, playerSelection));
+  alert(playRound(computerSelection, playerSelection));
+  alert(playRound(computerSelection, playerSelection));
+  alert(playRound(computerSelection, playerSelection));
+  alert(playRound(computerSelection, playerSelection));
+  alert(playRound(computerSelection, playerSelection));
   if (computerWins > playerWins) {
-    console.log("Computer Wins! " + computerWins + " to " + playerWins);
+    alert("Computer Wins! " + computerWins + " to " + playerWins);
   } else {
-    console.log("Player Wins! " + playerWins + " to " + computerWins);
+    alert("Player Wins! " + playerWins + " to " + computerWins);
   }
 }
 game();
