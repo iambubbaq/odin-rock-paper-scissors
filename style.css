@@ -1,55 +1,62 @@
 body {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 p {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
-.rock img, .paper img, .scissors img {
-    width: 250px;
-    height: 200px;
-    border-color: lightblue;
-    border-style: solid;
-    border-width: 8px;
-    border-radius: 25%;
+.rock img,
+.paper img,
+.scissors img {
+  width: 250px;
+  height: 200px;
+  border-color: lightblue;
+  border-style: solid;
+  border-width: 8px;
+  border-radius: 25%;
 }
 
-.header, .choices, .scores {
-    border-color: black;
-    border-width: 5px 5px 0px 5px;
-    border-style: solid;
-    background-color: beige;
+.header,
+.choices,
+.scores {
+  border-color: black;
+  border-width: 5px 5px 0px 5px;
+  border-style: solid;
+  background-color: beige;
 }
 
 .header {
-    background-color: darkred;
-    color: white;
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
+  background-color: darkred;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
 }
 
 .choices {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
 }
 
-.rock:hover, .paper:hover, .scissors:hover, .choices img:hover {
-    border-color: yellowgreen;
-    color: yellowgreen;
+.rock:hover,
+.paper:hover,
+.scissors:hover,
+.choices img:hover {
+  border-color: yellowgreen;
+  color: yellowgreen;
 }
 
 .scores {
-    padding-top: 10px;
-    border-bottom-width: 5px;
-    height: 25vh;
+  padding-top: 10px;
+  border-bottom-width: 5px;
+  height: 25vh;
 }
